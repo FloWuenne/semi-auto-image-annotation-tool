@@ -28,7 +28,7 @@ import math
 def get_session():
     config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
-    return tf.Session(config=config)
+    return tf.compat.v1.Session(config=config)
 
 
 keras.backend.tensorflow_backend.set_session(get_session())
