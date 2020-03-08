@@ -26,7 +26,7 @@ import math
 
 
 def get_session():
-    config = tf.ConfigProto()
+    config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
     return tf.Session(config=config)
 
