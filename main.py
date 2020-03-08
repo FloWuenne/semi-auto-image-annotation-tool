@@ -31,7 +31,7 @@ def get_session():
     return tf.compat.v1.Session(config=config)
 
 
-keras.backend.tensorflow_backend.set_session(get_session())
+tf.compat.v1.keras.backend.set_session(get_session())
 
 model_path = os.path.join('.', 'snapshots', 'resnet50_coco_best_v2.1.0.h5')
 
